@@ -81,7 +81,14 @@ def get_inference_data(image_folder_path, input_channels, input_size, transform=
 
 
 if __name__ == "__main__":
-    x, lg = get_inference_data("/home/tanay/interviews/vector_ai/fashion_mnist/test_images",
-                               1, 28, transform=transforms.Compose([ToTensor()]))
-    for i in x:
-        print(i.shape)
+    transform = get_transforms(28, 1)
+
+    dataloader_train, dataloader_test, train_size, test_size, class_names = load_dataset('./image_data/train',
+                                                                                         './image_data/test',
+                                                                                         100,
+                                                                                         )
+    x = 1
+    # x, lg = get_inference_data("./fashion_mnist/test_images",
+    #                            1, 28, transform=transforms.Compose([ToTensor()]))
+    # for i in x:
+    #     print(i.shape)

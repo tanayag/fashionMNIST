@@ -49,7 +49,23 @@ def str2bool(v):
         raise argparse.ArgumentTypeError('Boolean value expected.')
 
 
+def inverse_dict(dct):
+    """ fucntion written for fashionMNIST, since the csv follow
+    inverse lexicographical order"""
+    l = len(dct)
+    ele = []
+    for i in range(l):
+        ele.append(dct[i])
+    ele = ele[::-1]
+    inverse_dct = dict()
+    for i in range(l):
+        inverse_dct[i] = ele[i]
+
+    return inverse_dct
+
 if __name__ == "__main__":
     from class_maps import CLASS_MAP
 
-    csv_to_image("./data/fashion-mnist_test.csv", 'image_data/test', CLASS_MAP["FashionMNIST"])
+    csv_to_image("./data/fashion-mnist_test.csv", 'image_data/test', inverse_dict(CLASS_MAP["FashionMNIST"]))
+
+    print(inverse_dict(CLASS_MAP["FashionMNIST"]))

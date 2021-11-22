@@ -1,17 +1,17 @@
 CLASS_MAP = {
     "FashionMNIST": {
-        0: "T_Shirt",
-        1: "Trouser",
-        2: "Pullover",
+        0: "Ankle_Boot",
+        1: "Bag",
+        2: "Coat",
         3: "Dress",
-        4: "Coat",
+        4: "Pullover",
         5: "Sandal",
         6: "Shirt",
         7: "Sneaker",
-        8: "Bag",
-        9: "Ankle_Boot",
+        8: "T_Shirt",
+        9: "Trouser",
     },
-    # Example
+    # Example;
     "DataSetName": {
         0: "label_name",
         1: "label_name"
