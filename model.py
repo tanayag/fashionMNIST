@@ -21,7 +21,7 @@ def get_fcn(num_nodes, len_classes):
     return fcn
 
 
-def resnet18(len_classes):
+def resnet18(input_channel, len_classes):
     network = torchvision.models.resnet18(pretrained=True)
     num_nodes = network.fc.in_features
     del network.fc

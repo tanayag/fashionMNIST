@@ -5,6 +5,7 @@ import pandas as pd
 from PIL import Image
 from tqdm import tqdm
 import json
+import argparse
 
 
 def csv_to_image(data_csv_path, folder, class_map):
@@ -39,7 +40,16 @@ def load_json(file_path):
     return dct
 
 
-if __name__ == "__main__":
-    from fashionMNIST_label import CLASS_MAP
+def str2bool(v):
+    if v.lower() in ('yes', 'true', 't', 'y', '1', 'True'):
+        return True
+    elif v.lower() in ('no', 'false', 'f', 'n', '0', 'False'):
+        return False
+    else:
+        raise argparse.ArgumentTypeError('Boolean value expected.')
 
-    csv_to_image("./data/fashion-mnist_test.csv", 'image_data/test', CLASS_MAP)
+
+if __name__ == "__main__":
+    from class_maps import CLASS_MAP
+
+    csv_to_image("./data/fashion-mnist_test.csv", 'image_data/test', CLASS_MAP["FashionMNIST"])

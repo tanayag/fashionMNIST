@@ -58,7 +58,7 @@ class LoadInferenceData(Dataset):
         img = img.reshape(self.input_channels, *img.shape)
         if self.transform:
             img = self.transform(img)
-        return img
+        return img, str(img_path.split('/')[-1])
 
 
 class ToTensor(object):
