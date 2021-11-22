@@ -12,8 +12,8 @@
 `python main.py -predict t -data_dir_infer ./test_images/`
 
 While Inference, go to file `class_maps.py`
-and add a dictionary mapping for label to indexes.
-For Eg.
+and add a dictionary mapping for label to index.
+For E.g.
 
 ```
 CLASS_MAP = {
@@ -37,7 +37,7 @@ CLASS_MAP = {
     }
 }
 ```
-Remeber to add in lexicographical order, since pytorch reads it that way.
+Remember to add in lexicographical order, since pytorch reads it that way.
 Class map for FashionMNIST already added, add for the new dataset you train.
 
 These are the basic parameters to train and test a model. More parameters present, check
