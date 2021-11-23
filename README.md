@@ -43,4 +43,31 @@ Class map for FashionMNIST already added, add for the new dataset you train.
 These are the basic parameters to train and test a model. More parameters present, check
 `python main.py -h`
 
+### Message Broker
+
+1. Download and extract Kafka
+
+`wget https://dlcdn.apache.org/kafka/3.0.0/kafka_2.13-3.0.0.tgz`
+
+`tar -xzf kafka_2.13-3.0.0.tgz`
+
+2. Go into the downloaded kafka folder
+
+`cd kafka_2.13-3.0.0.tgz`
+
+3. Start the zookeeper
+
+`bin/zookeeper-server-start.sh config/zookeeper.properties`
+
+4. Start Kafka
+
+`bin/kafka-server-start.sh config/server.properties`
+
+5. Run the script `producer.py`
+
+`python producer.py`
+
+6. Run the script `consumer.py`
+
+`python consumer.py`
 
