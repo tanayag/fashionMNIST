@@ -63,11 +63,11 @@ These are the basic parameters to train and test a model. More parameters presen
 
 `bin/kafka-server-start.sh config/server.properties`
 
-5. Run the script `producer.py`
+5. Run the script `producer_app.py`
 
-`python producer.py`
+`python producer_app.py`
 
-6. Run the script `consumer.py`
+6. Run the script `consumer_app.py`
 
-`python consumer.py`
+`python consumer_app.py`
 
